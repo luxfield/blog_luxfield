@@ -2,7 +2,7 @@ baseurl = "/"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
-
+canonifyurls = true
 [permalinks]
   post = '/:slug/'
 

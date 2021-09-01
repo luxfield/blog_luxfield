@@ -1,13 +1,14 @@
 ---
-title: "Fungsi Callable() python"
+title: "Fungsi callable() python"
 date: 2021-09-01T08:46:04+07:00
 draft: false
 Author: "Surya Efendi"
+Description: "Fungsi callable pada python akan mengembalikan nilai `True` jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai `False`"
 ---
 
 ## Deskripsi
 
-Fungsi Callable pada python akan mengembalikan nilai `True` jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai `False`
+Fungsi callable pada python akan mengembalikan nilai `True` jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai `False`
 
 ---
 
@@ -16,7 +17,7 @@ Fungsi Callable pada python akan mengembalikan nilai `True` jika objek yang menj
 Fungsi callable() memiliki sintaks sebagai berikut:
 
 ```python
-Callable(object)
+callable(object)
 ```
 
 ---
@@ -29,7 +30,7 @@ Callable(object)
 
 ## Nilai Kembalian
 
-Fungsi Callable() akan mengembalikan:
+Fungsi callable() akan mengembalikan:
 
 - `True` -- jika objek bisa dipanggil
 - `False` -- jika objek tidak bisa dipanggil
@@ -46,13 +47,19 @@ Fungsi Callable() akan mengembalikan:
 
 ```python
 a:int = 10
-print(Callable(x))
+print(callable(x))
 
 def hello()->None:
     print("Hello World")
 
 b = hello
-print(Callable(b))
+print(callable(b))
+
+class kelas:
+    def fungsi()->None:
+        print("Hello World")
+
+print(callable(kelas))
 ```
 
 ---
@@ -62,6 +69,7 @@ Output
 Output dari program di atas adalah seperti berikut:
 
 ```python
-True
 False
+True
+True
 ```

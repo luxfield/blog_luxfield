@@ -1,4 +1,4 @@
 [submodule "public"]
 	path = public
-	url = git@github.com:reizenu-uyhaa/reizenu-uyhaa.github.io.git
+	url = git@github.com:luxfield/lightning-x.git
 	branch = master

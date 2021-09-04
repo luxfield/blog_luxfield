@@ -16,7 +16,7 @@ fi
 git commit -m "$msg"
 
 # Push atau puload ke Github
-git push origin master -f
+git push origin master
 
 # pindah ke direktori publik
 cd public

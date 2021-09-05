@@ -4,5 +4,6 @@ date: {{ .Date }}
 draft: true
 Author: "Surya Efendi"
 Description: ""
+Cover: ""
 ---
 

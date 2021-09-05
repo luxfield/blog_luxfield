@@ -24,15 +24,15 @@ debugger memperbolehkan menjalankan kode python dari browser, itu terlindungi ol
 
 untuk mengaktifkan semua fitur development, set `FLASK_ENV` pada environment variable dengan nilai development sebelum menjalankan `Flask`
 
-{{< code language="bash" id="1" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="bash" id="1" expand="Tampilkan" collapse="Hide" isCollapsed="true" >}}
 $ export FLASK_ENV=development
 $ flask run
 {{< /code >}}
-{{< code language="CMD" id="2" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="CMD" id="2" expand="Tampilkan" collapse="Hide" isCollapsed="true" >}}
 > set FLASK_ENV=development
 > flask run
 {{< /code >}}
-{{< code language="Powershell" id="3" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="Powershell" id="3" expand="Tampilkan" collapse="Hide" isCollapsed="true" >}}
 > $env:FLASK_ENV = "development"
 > flask run
 {{< /code >}}

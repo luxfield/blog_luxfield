@@ -1,0 +1,185 @@
+<!doctype html><html lang=en>
+<head>
+<title>Cara Membuat TOC di Hugo :: lightning-x</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=/cara-membuat-toc-di-hugo/>
+<link rel=stylesheet href=/assets/style.css>
+<link rel=stylesheet href=/assets/green.css>
+<link rel=apple-touch-icon href=/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=/img/favicon/green.png>
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="uyhaa_zxcf">
+<meta name=twitter:creator content="Surya Efendi">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cara Membuat TOC di Hugo">
+<meta property="og:description" content="Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?">
+<meta property="og:url" content="/cara-membuat-toc-di-hugo/">
+<meta property="og:site_name" content="lightning-x">
+<meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:published_time" content="2021-09-06 18:18:35 +0700 +07">
+</head>
+<body class=green>
+<div class="container center headings--one-size">
+<header class=header>
+<script src=https://stiobhart.net/download/isso/embed.min.js></script>
+<div class=header__inner>
+<div class=header__logo>
+<a href=/>
+<div class=logo>
+lightning-x
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=/cara-membuat-toc-di-hugo/>Cara Membuat TOC di Hugo</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2021-09-06
+</span>
+<span class=post-author>:: Surya Efendi</span>
+</div>
+<span class=post-tags>
+#<a href=/tags/hugo/>Hugo</a>&nbsp;
+</span>
+<img src=https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg class=post-cover alt="Cara Membuat TOC di Hugo">
+<div class=table-of-contents>
+<h2>
+Daftar Isi
+</h2>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#pengertian-toc-table-of-content>Pengertian TOC (Table Of Content)</a></li>
+<li><a href=#apa-fungsinya-toc>Apa Fungsinya TOC?</a></li>
+<li><a href=#bagaimana-cara-membuat-toc-di-hugo>Bagaimana Cara Membuat TOC di Hugo?</a>
+<ul>
+<li><a href=#1-toc-di-single-page-template>1. TOC di single page template</a></li>
+<li><a href=#2-toc-di-partial-page-template>2. TOC di partial page template</a></li>
+</ul>
+</li>
+<li><a href=#konfigurasi-toc>Konfigurasi TOC</a></li>
+<li><a href=#kesimpulan>Kesimpulan</a></li>
+</ul>
+</nav>
+</div>
+<div class=post-content><div>
+<p><strong>Cara Membuat TOC di Hugo</strong> - Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, didalam daftar isi banyak judul-judul/bagian-bagian didalam sebuah blog, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di Hugo itu apa ?.</p>
+<h2 id=pengertian-toc-table-of-content>Pengertian TOC (Table Of Content)<a href=#pengertian-toc-table-of-content class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>TOC (Table of Content) adalah pembuatan daftar isi secara otomatis dan dinamis, pada halaman website biasanya TOC akan terbuat secara otomatis mengikuti heading yang kita buat pada tulisan di halaman tersebut.</p>
+<p>Contohnya seperti ini:</p>
+<p><img src=/img/membuat_toc_hugo/toc.jpg alt=toc></p>
+<p>Jika salah satu poin pada daftar isinya di klik maka langsung mengarah ke pembahasan tersebut misal kita klik &ldquo;On-Target (T.O.C)&rdquo; maka tampilan halaman pada website akan langsung menampilkan pembahasan tentang &ldquo;On-Target (T.O.C)&rdquo; pada halaman website yang sama.</p>
+<h2 id=apa-fungsinya-toc>Apa Fungsinya TOC?<a href=#apa-fungsinya-toc class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>Sebagai pemilik website Anda harus memahami karakter pembaca website Anda, tidak semua user suka membaca artikel yang cukup panjang. Mereka biasanya lebih suka membaca hal penting yang mereka cari saja.</p>
+<p>Misal pada konten jualan, mungkin user tipe ini hanya fokus mencari harga produk Anda saja. atau hanya fokus mencari penjelasan spesifikasi produk yang Anda tawarkan tanpa mau membaca pembahasan lainnya.</p>
+<p>Untuk user seperti ini TOC sangat penting adanya, sehingga mereka hanya perlu melihat daftar isinya saja kemudian meng-klik judul informasi yang mereka cari untuk langsung menuju ke pembahasan judul tersebut.</p>
+<p>Tanpa adanya TOC, user seperti ini akan langsung keluar dari website Anda karena malas scrol dan membaca artikel secara keseluruhan untuk menemukan informasi yang mereka cari. Hal ini mengakibatkan bounce rate di website menjadi tinggi dan menyebabkan user experience website menjadi buruk di mata Google</p>
+<h2 id=bagaimana-cara-membuat-toc-di-hugo>Bagaimana Cara Membuat TOC di Hugo?<a href=#bagaimana-cara-membuat-toc-di-hugo class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>di hugo ada 2 cara untuk membuat TOC</p>
+<h3 id=1-toc-di-single-page-template>1. TOC di single page template<a href=#1-toc-di-single-page-template class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>untuk membuat TOC di single page template ini mudah sekali, buka file <code>single.html</code> di <code>layout/_default/single.html</code> jika tidak ada maka buat saja dengan nama <code>single.html</code> kemudian ikutin contoh dibawah ini</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>{{ define &#34;main&#34; }}
+<span class=p>&lt;</span><span class=nt>main</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>article</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>header</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>h1</span><span class=p>&gt;</span>{{ .Title }}<span class=p>&lt;/</span><span class=nt>h1</span><span class=p>&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>header</span><span class=p>&gt;</span>
+        {{ .Content }}
+    <span class=p>&lt;/</span><span class=nt>article</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>aside</span><span class=p>&gt;</span>
+        {{ .TableOfContents }}
+    <span class=p>&lt;/</span><span class=nt>aside</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>main</span><span class=p>&gt;</span>
+{{ end }}
+</code></pre></div><h3 id=2-toc-di-partial-page-template>2. TOC di partial page template<a href=#2-toc-di-partial-page-template class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>sama saja dengan single page template untuk membuat TOC di partial page template ini mudah sekali, buka file <code>toc.html</code> di <code>layout/partials/toc.html</code> jika tidak ada maka buat saja dengan nama <code>toc.html</code> atau bebas kemudian ikutin contoh dibawah ini</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<span class=p>&lt;</span><span class=nt>aside</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>header</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>h2</span><span class=p>&gt;</span>{{.Title}}<span class=p>&lt;/</span><span class=nt>h2</span><span class=p>&gt;</span>
+    <span class=p>&lt;/</span><span class=nt>header</span><span class=p>&gt;</span>
+    {{.TableOfContents}}
+<span class=p>&lt;/</span><span class=nt>aside</span><span class=p>&gt;</span>
+{{ end }}
+
+</code></pre></div><p>Penjelasan kode diatas:</p>
+<ul>
+<li><code>.WordCount</code> : fungsi ini akan menghitung kata dalam halaman webite kita</li>
+<li><code>.Params.toc</code> : fungsi ini akan menampilkan toc jika nilai <code>true</code> maka toc akan tampil</li>
+</ul>
+<p>Karena partial page template ini terpisah dari layout maka untuk memasukan <code>toc.html</code> kedalam halaman website kita dapat menggunakan</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=p>{{</span> <span class=nx>partial</span> <span class=s>&#34;partials/toc.html&#34;</span> <span class=p>.</span> <span class=p>}}</span>
+</code></pre></div><h2 id=konfigurasi-toc>Konfigurasi TOC<a href=#konfigurasi-toc class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>pada tag <code>{{ .TableOfContents }}</code> berisi TOC pada sebuah halaman website kita, kemudian kita konfigurasi <code>{{ .TableOfContents }}</code> di <code>config.toml</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+</code></pre></div><p>penjelasan <code>[markup.tableOfContents]</code> :</p>
+<ul>
+<li><code>endLevel</code> : batas akhir sub judul yang akan di tampilkan di TOC, nilainya berdasarkan tag html, misal <code>3</code> maka tag html <code>&lt;/h3>&lt;/h3></code> akan ditampilkan di TOC, tag <code>&lt;h4>&lt;/h4></code> keatas tidak akan ditampilkan</li>
+<li><code>ordered</code> : pada bagian ini judul-judul pada TOC akan diurutkan apabila di set nilai <code>true</code></li>
+<li><code>startLevel</code> : batas awal judul yang akan di tampilkan di TOC, nilainya berdasarkan tag html, misal <code>2</code> maka tag html <code>&lt;/h2>&lt;/h2></code> akan ditampilkan di TOC, tag <code>&lt;h1>&lt;/h1></code> keatas tidak akan ditampilkan</li>
+</ul>
+<h2 id=kesimpulan>Kesimpulan<a href=#kesimpulan class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>Kita bisa tau apa itu TOC dan fungsi TOC untuk website kita, memudahkan pembaca untuk melihat apa yang mereka ingin lihat, kemudian kita dapat membuat TOC di hugo dan mengkonfigurasikannya, sekian dari saya semoga tulisan ini bermanfaat</p>
+<p><strong>Referensi</strong></p>
+<ul>
+<li>
+<a href=https://gohugo.io/content-management/toc/ onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank')" target=_blank>https://gohugo.io/content-management/toc/</a>
+</li>
+<li>
+<a href=https://gohugo.io/templates/partials/ onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank')" target=_blank>https://gohugo.io/templates/partials/</a>
+</li>
+<li>
+<a href=https://gohugo.io/getting-started/configuration-markup/#table-of-contents onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank')" target=_blank>https://gohugo.io/getting-started/configuration-markup/#table-of-contents</a>
+</li>
+<li>
+<a href=https://defriansyah.net/table-of-content/ onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank')" target=_blank>https://defriansyah.net/table-of-content/</a>
+</li>
+</ul>
+<hr>
+</div></div>
+<div id=container-5fb049130f5ac4c9ac0b578322ca4faf></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h>Baca Artikel lainnya</span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button next">
+<a href=/mode-debug-flask/>
+<span class=button__text>Mode Debug Flask</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+<section id=isso-thread>
+</section>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>© 2021 ligtning-x | Diberdayakan oleh <a href=http://gohugo.io>Hugo</a></span>
+</div>
+</div>
+</footer>
+<script src=/assets/main.js></script>
+<script src=/assets/prism.js></script>
+<script async data-cfasync=false src=//pl16576237.effectivecpmgate.com/5fb049130f5ac4c9ac0b578322ca4faf/invoke.js></script>
+</div>
+</body>
+</html>

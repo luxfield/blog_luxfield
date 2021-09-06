@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on lightning-x</title><link>/post/</link><description>Recent content in Posts on lightning-x</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 06 Sep 2021 18:18:35 +0700</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Cara Membuat TOC di Hugo</title><link>/cara-membuat-toc-di-hugo/</link><pubDate>Mon, 06 Sep 2021 18:18:35 +0700</pubDate><guid>/cara-membuat-toc-di-hugo/</guid><description>Cara Membuat TOC di Hugo - Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, didalam daftar isi banyak judul-judul/bagian-bagian didalam sebuah blog, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di Hugo itu apa ?.
+Pengertian TOC (Table Of Content) TOC (Table of Content) adalah pembuatan daftar isi secara otomatis dan dinamis, pada halaman website biasanya TOC akan terbuat secara otomatis mengikuti heading yang kita buat pada tulisan di halaman tersebut.</description><content>&lt;p>&lt;strong>Cara Membuat TOC di Hugo&lt;/strong> - Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, didalam daftar isi banyak judul-judul/bagian-bagian didalam sebuah blog, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di Hugo itu apa ?.&lt;/p>
+&lt;h2 id="pengertian-toc-table-of-content">Pengertian TOC (Table Of Content)&lt;/h2>
+&lt;p>TOC (Table of Content) adalah pembuatan daftar isi secara otomatis dan dinamis, pada halaman website biasanya TOC akan terbuat secara otomatis mengikuti heading yang kita buat pada tulisan di halaman tersebut.&lt;/p>
+&lt;p>Contohnya seperti ini:&lt;/p>
+&lt;p>&lt;img src="/img/membuat_toc_hugo/toc.jpg" alt="toc">&lt;/p>
+&lt;p>Jika salah satu poin pada daftar isinya di klik maka langsung mengarah ke pembahasan tersebut misal kita klik &amp;ldquo;On-Target (T.O.C)&amp;rdquo; maka tampilan halaman pada website akan langsung menampilkan pembahasan tentang &amp;ldquo;On-Target (T.O.C)&amp;rdquo; pada halaman website yang sama.&lt;/p>
+&lt;h2 id="apa-fungsinya-toc">Apa Fungsinya TOC?&lt;/h2>
+&lt;p>Sebagai pemilik website Anda harus memahami karakter pembaca website Anda, tidak semua user suka membaca artikel yang cukup panjang. Mereka biasanya lebih suka membaca hal penting yang mereka cari saja.&lt;/p>
+&lt;p>Misal pada konten jualan, mungkin user tipe ini hanya fokus mencari harga produk Anda saja. atau hanya fokus mencari penjelasan spesifikasi produk yang Anda tawarkan tanpa mau membaca pembahasan lainnya.&lt;/p>
+&lt;p>Untuk user seperti ini TOC sangat penting adanya, sehingga mereka hanya perlu melihat daftar isinya saja kemudian meng-klik judul informasi yang mereka cari untuk langsung menuju ke pembahasan judul tersebut.&lt;/p>
+&lt;p>Tanpa adanya TOC, user seperti ini akan langsung keluar dari website Anda karena malas scrol dan membaca artikel secara keseluruhan untuk menemukan informasi yang mereka cari. Hal ini mengakibatkan bounce rate di website menjadi tinggi dan menyebabkan user experience website menjadi buruk di mata Google&lt;/p>
+&lt;h2 id="bagaimana-cara-membuat-toc-di-hugo">Bagaimana Cara Membuat TOC di Hugo?&lt;/h2>
+&lt;p>di hugo ada 2 cara untuk membuat TOC&lt;/p>
+&lt;h3 id="1-toc-di-single-page-template">1. TOC di single page template&lt;/h3>
+&lt;p>untuk membuat TOC di single page template ini mudah sekali, buka file &lt;code>single.html&lt;/code> di &lt;code>layout/_default/single.html&lt;/code> jika tidak ada maka buat saja dengan nama &lt;code>single.html&lt;/code> kemudian ikutin contoh dibawah ini&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">{{ define &amp;#34;main&amp;#34; }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">article&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Title }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ .Content }}
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">article&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">aside&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ .TableOfContents }}
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">aside&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ end }}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2-toc-di-partial-page-template">2. TOC di partial page template&lt;/h3>
+&lt;p>sama saja dengan single page template untuk membuat TOC di partial page template ini mudah sekali, buka file &lt;code>toc.html&lt;/code> di &lt;code>layout/partials/toc.html&lt;/code> jika tidak ada maka buat saja dengan nama &lt;code>toc.html&lt;/code> atau bebas kemudian ikutin contoh dibawah ini&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">aside&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{.Title}}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{.TableOfContents}}
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">aside&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ end }}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Penjelasan kode diatas:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>.WordCount&lt;/code> : fungsi ini akan menghitung kata dalam halaman webite kita&lt;/li>
+&lt;li>&lt;code>.Params.toc&lt;/code> : fungsi ini akan menampilkan toc jika nilai &lt;code>true&lt;/code> maka toc akan tampil&lt;/li>
+&lt;/ul>
+&lt;p>Karena partial page template ini terpisah dari layout maka untuk memasukan &lt;code>toc.html&lt;/code> kedalam halaman website kita dapat menggunakan&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="p">{{&lt;/span> &lt;span class="nx">partial&lt;/span> &lt;span class="s">&amp;#34;partials/toc.html&amp;#34;&lt;/span> &lt;span class="p">.&lt;/span> &lt;span class="p">}}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="konfigurasi-toc">Konfigurasi TOC&lt;/h2>
+&lt;p>pada tag &lt;code>{{ .TableOfContents }}&lt;/code> berisi TOC pada sebuah halaman website kita, kemudian kita konfigurasi &lt;code>{{ .TableOfContents }}&lt;/code> di &lt;code>config.toml&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">[markup]
+[markup.tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 2
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>penjelasan &lt;code>[markup.tableOfContents]&lt;/code> :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>endLevel&lt;/code> : batas akhir sub judul yang akan di tampilkan di TOC, nilainya berdasarkan tag html, misal &lt;code>3&lt;/code> maka tag html &lt;code>&amp;lt;/h3&amp;gt;&amp;lt;/h3&amp;gt;&lt;/code> akan ditampilkan di TOC, tag &lt;code>&amp;lt;h4&amp;gt;&amp;lt;/h4&amp;gt;&lt;/code> keatas tidak akan ditampilkan&lt;/li>
+&lt;li>&lt;code>ordered&lt;/code> : pada bagian ini judul-judul pada TOC akan diurutkan apabila di set nilai &lt;code>true&lt;/code>&lt;/li>
+&lt;li>&lt;code>startLevel&lt;/code> : batas awal judul yang akan di tampilkan di TOC, nilainya berdasarkan tag html, misal &lt;code>2&lt;/code> maka tag html &lt;code>&amp;lt;/h2&amp;gt;&amp;lt;/h2&amp;gt;&lt;/code> akan ditampilkan di TOC, tag &lt;code>&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/code> keatas tidak akan ditampilkan&lt;/li>
+&lt;/ul>
+&lt;h2 id="kesimpulan">Kesimpulan&lt;/h2>
+&lt;p>Kita bisa tau apa itu TOC dan fungsi TOC untuk website kita, memudahkan pembaca untuk melihat apa yang mereka ingin lihat, kemudian kita dapat membuat TOC di hugo dan mengkonfigurasikannya, sekian dari saya semoga tulisan ini bermanfaat&lt;/p>
+&lt;p>&lt;strong>Referensi&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://gohugo.io/content-management/toc/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/content-management/toc/&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://gohugo.io/templates/partials/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/templates/partials/&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/getting-started/configuration-markup/#table-of-contents&lt;/a>
+&lt;/li>
+&lt;li>
+&lt;a href="https://defriansyah.net/table-of-content/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://defriansyah.net/table-of-content/&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;hr></content></item><item><title>Mode Debug Flask</title><link>/mode-debug-flask/</link><pubDate>Sun, 05 Sep 2021 14:41:44 +0700</pubDate><guid>/mode-debug-flask/</guid><description>Deskripsi Flask dapat melakukan aksi lebih banyak sekedar hanya menjalankan development server, dengan mengaktifkan debug mode, Flask secara otomatis akan memuat ulang server ketika ada perubahan kode, dan akan menampilkan sebuah debug interaktif pada browser jika ada masalah terjadi saat melakukan permintaan
+Peringatan debugger memperbolehkan menjalankan kode python dari browser, itu terlindungi oleh pin, tetapi tetap merupakan sebuah resiko keamanan utama, jangan jalankan development server atau debugger pada lingkungan production</description><content>&lt;h2 id="deskripsi">Deskripsi&lt;/h2>
+&lt;p>&lt;code>Flask&lt;/code> dapat melakukan aksi lebih banyak sekedar hanya menjalankan development server, dengan mengaktifkan debug mode, &lt;code>Flask&lt;/code> secara otomatis akan memuat ulang server ketika ada perubahan kode, dan akan menampilkan sebuah debug interaktif pada browser jika ada masalah terjadi saat melakukan permintaan&lt;/p>
+&lt;p>&lt;img src="https://flask.palletsprojects.com/en/2.0.x/_images/debugger.png" alt="Flask Debug">&lt;/p>
+&lt;hr>
+&lt;h2 id="peringatan">Peringatan&lt;/h2>
+&lt;p>debugger memperbolehkan menjalankan kode python dari browser, itu terlindungi oleh pin, tetapi tetap merupakan sebuah resiko keamanan utama, jangan jalankan development server atau debugger pada lingkungan production&lt;/p>
+&lt;hr>
+&lt;p>untuk mengaktifkan semua fitur development, set &lt;code>FLASK_ENV&lt;/code> pada environment variable dengan nilai development sebelum menjalankan &lt;code>Flask&lt;/code>&lt;/p>
+&lt;p>
+&lt;div class="collapsable-code">
+&lt;input id="1" type="checkbox" checked />
+&lt;label for="1">
+&lt;span class="collapsable-code__language">bash&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-bash" >&lt;code>
+$ export FLASK_ENV=development
+$ flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="collapsable-code">
+&lt;input id="2" type="checkbox" checked />
+&lt;label for="2">
+&lt;span class="collapsable-code__language">CMD&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-CMD" >&lt;code>
+&amp;gt; set FLASK_ENV=development
+&amp;gt; flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="collapsable-code">
+&lt;input id="3" type="checkbox" checked />
+&lt;label for="3">
+&lt;span class="collapsable-code__language">Powershell&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-Powershell" >&lt;code>
+&amp;gt; $env:FLASK_ENV = &amp;#34;development&amp;#34;
+&amp;gt; flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;p>Lihat Juga:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/server/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Development Server&lt;/a> dan &lt;a href="https://flask.palletsprojects.com/en/2.0.x/cli/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Command Line Interface&lt;/a> untuk informasi tentang menjalankan web pada mode development
+&lt;/li>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/debugging/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Debugging Application Errors&lt;/a> for information about using the built-in debugger and other debuggers.
+&lt;/li>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/logging/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Logging&lt;/a> dan &lt;a href="https://flask.palletsprojects.com/en/2.0.x/errorhandling/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Handling Application Errors&lt;/a> to log errors and display nice error pages.
+&lt;/li>
+&lt;/ul></content></item><item><title>Fungsi callable() python</title><link>/fungsi-callable-python/</link><pubDate>Wed, 01 Sep 2021 08:46:04 +0700</pubDate><guid>/fungsi-callable-python/</guid><description>Deskripsi Fungsi callable pada python akan mengembalikan nilai True jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai False
+Syntax Fungsi callable() memiliki sintaks sebagai berikut:
+callable(object) Parameter object – objek yang akan diuji apakah bisa dipanggil atau tidak Nilai Kembalian Fungsi callable() akan mengembalikan:
+True &amp;ndash; jika objek bisa dipanggil False &amp;ndash; jika objek tidak bisa dipanggil Perlu dicatat bahwa meskipun kembalian dari callable() adalah True, bisa saja pemanggilan terhadap objek masih gagal.</description><content>&lt;h2 id="deskripsi">Deskripsi&lt;/h2>
+&lt;p>Fungsi callable pada python akan mengembalikan nilai &lt;code>True&lt;/code> jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai &lt;code>False&lt;/code>&lt;/p>
+&lt;hr>
+&lt;h2 id="syntax">Syntax&lt;/h2>
+&lt;p>Fungsi callable() memiliki sintaks sebagai berikut:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">callable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">object&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="parameter">Parameter&lt;/h2>
+&lt;ul>
+&lt;li>object – objek yang akan diuji apakah bisa dipanggil atau tidak&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="nilai-kembalian">Nilai Kembalian&lt;/h2>
+&lt;p>Fungsi callable() akan mengembalikan:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>True&lt;/code> &amp;ndash; jika objek bisa dipanggil&lt;/li>
+&lt;li>&lt;code>False&lt;/code> &amp;ndash; jika objek tidak bisa dipanggil&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Perlu dicatat bahwa meskipun kembalian dari callable() adalah True, bisa saja pemanggilan terhadap objek masih gagal.&lt;/p>
+&lt;p>Tapi, saat kembaliannya False, maka sudah pasti pemanggilan terhadap objek tersebut akan gagal.&lt;/p>
+&lt;p>Perhatikan bahwa &lt;code>Class&lt;/code> dapat dipanggil (memanggil &lt;code>Class&lt;/code> akan mengembalikan sebuah fungsi) fungsi adalah callable jika &lt;code>Class&lt;/code>-nya memiliki fungsi &lt;code>__call__()&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="contoh">Contoh&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">a&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nb">int&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">callable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">hello&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="kc">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello World&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hello&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">callable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="k">class&lt;/span> &lt;span class="nc">kelas&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">fungsi&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="kc">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello World&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">callable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">kelas&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>Output&lt;/p>
+&lt;p>Output dari program di atas adalah seperti berikut:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kc">False&lt;/span>
+&lt;span class="kc">True&lt;/span>
+&lt;span class="kc">True&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></content></item><item><title>Test2</title><link>/test2/</link><pubDate>Tue, 24 Aug 2021 18:17:36 +0700</pubDate><guid>/test2/</guid><description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim cursus magna, nec accumsan ipsum iaculis a. Vivamus ornare vehicula imperdiet. Nam aliquam enim eget elit ornare blandit. Integer non sem semper, volutpat orci ut, convallis velit. Phasellus et velit hendrerit, molestie sapien tempus, vestibulum erat. Nullam laoreet commodo lectus sagittis porttitor. Vestibulum et pellentesque urna, nec aliquam lorem. Duis eros nulla, ullamcorper eu ullamcorper eget, porta at dolor. Etiam sit amet commodo velit.</description><content>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim cursus magna, nec accumsan ipsum iaculis a. Vivamus ornare vehicula imperdiet. Nam aliquam enim eget elit ornare blandit. Integer non sem semper, volutpat orci ut, convallis velit. Phasellus et velit hendrerit, molestie sapien tempus, vestibulum erat. Nullam laoreet commodo lectus sagittis porttitor. Vestibulum et pellentesque urna, nec aliquam lorem. Duis eros nulla, ullamcorper eu ullamcorper eget, porta at dolor. Etiam sit amet commodo velit. Integer nulla elit, mattis vitae blandit at, finibus pellentesque tellus. Integer venenatis vulputate dui, convallis pulvinar neque viverra eget.&lt;/p>
+&lt;p>Sed non auctor ligula. Suspendisse potenti. Donec faucibus tellus sit amet nulla aliquet, sed vehicula sapien gravida. Mauris eget lectus non ligula laoreet ullamcorper viverra sit amet enim. Vestibulum vulputate faucibus molestie. Donec vitae leo eget nunc lacinia hendrerit. Aenean non lacus ac mauris elementum fringilla nec sit amet libero. Quisque vitae purus at metus elementum malesuada at vitae lorem. Proin justo justo, suscipit quis tortor nec, porta auctor felis.&lt;/p>
+&lt;p>Donec sed nunc tempor, tincidunt sem ac, rutrum leo. Proin eros libero, congue ut tempor vel, fermentum id mauris. Donec aliquet, nibh eu molestie porttitor, odio sem semper diam, ut ultricies ligula enim vitae elit. Suspendisse tortor lacus, aliquam sed convallis eu, tempus quis tortor. Sed semper nunc id gravida malesuada. Vestibulum dignissim odio ut lorem imperdiet, ac fringilla ante scelerisque. Vestibulum sit amet mi ultrices, commodo leo sed, varius purus. Aliquam imperdiet nisl sapien, sed tincidunt odio malesuada sed. Ut vel libero lectus. Pellentesque id vulputate magna. Vestibulum hendrerit enim nec pulvinar finibus. Cras malesuada commodo dolor, at euismod risus convallis non. Nam ut tincidunt nisl. Integer eget sagittis velit.&lt;/p>
+&lt;p>Vestibulum mollis arcu sed aliquet efficitur. Sed tempus non nibh in aliquam. Nunc vel sollicitudin leo. Curabitur tincidunt arcu lacinia lectus mollis fringilla. Mauris luctus ex a quam malesuada viverra. Aliquam fringilla massa suscipit urna congue, at placerat sem euismod. Nunc eu ornare tellus. Vestibulum posuere nisl nisi, vitae volutpat ex porttitor sit amet. Nam finibus condimentum gravida. Cras feugiat viverra massa et pretium. Nunc iaculis, urna ac imperdiet eleifend, nibh ipsum tempor nisi, eget posuere magna magna id sem. Donec cursus dui sed luctus facilisis.&lt;/p>
+&lt;p>Pellentesque nec neque interdum, vulputate eros ac, ornare velit. Suspendisse at ipsum ut nisl mollis pellentesque ornare id ligula. Vestibulum sit amet enim risus. Curabitur sed lorem et nisl dignissim aliquet a ac enim. Cras rutrum eu arcu non vestibulum. Proin dictum sapien ac felis blandit, ac tincidunt purus luctus. Curabitur quis mollis erat. Etiam ac scelerisque arcu, eget vulputate elit. Donec a lectus sollicitudin ipsum gravida malesuada. Praesent venenatis sapien ac turpis aliquet, commodo tincidunt mi hendrerit. Nam lacinia libero ex, vel cursus augue commodo vel. Maecenas vitae justo ut quam elementum maximus sed in ipsum.&lt;/p>
+&lt;p>Nam justo massa, pulvinar quis odio eu, blandit luctus neque. Vivamus porttitor quis velit eu accumsan. Ut tempus aliquet purus, vitae facilisis arcu egestas eget. Aliquam erat volutpat. Nunc nec libero dui. Suspendisse leo nisl, porta vitae est nec, eleifend sollicitudin enim. Phasellus euismod, velit sit amet cursus luctus, felis ante tincidunt nulla, vel varius nisl lectus vitae augue. Curabitur sit amet ligula luctus, venenatis magna ut, tristique risus. Pellentesque nisi mi, auctor ac iaculis et, cursus vel massa. Nulla vehicula pretium dui, nec vestibulum sapien suscipit sit amet. Morbi lobortis, metus vel placerat scelerisque, odio nisi varius diam, vel rhoncus lectus nulla a leo. Sed placerat eget sapien ac accumsan. Curabitur quis libero ut odio facilisis dapibus semper non tellus. Donec eu convallis sem, at semper odio.&lt;/p>
+&lt;p>Suspendisse justo sem, facilisis at sem vel, maximus suscipit dolor. Fusce bibendum leo a augue malesuada luctus. Vivamus faucibus maximus nunc id interdum. Nulla facilisi. Vivamus feugiat vitae sem ut dapibus. Maecenas non dignissim purus. Cras vulputate placerat consectetur.&lt;/p>
+&lt;p>In dictum nunc sit amet maximus fermentum. Sed massa nisl, pulvinar ut mollis eu, finibus et ligula. Nulla in libero sodales, vestibulum felis eget, venenatis nisl. Praesent efficitur accumsan consectetur. Suspendisse imperdiet vehicula ante nec porttitor. Nunc eu neque a turpis bibendum malesuada finibus at turpis. Fusce et elit lorem. Duis fringilla, justo vitae mollis commodo, nisi nulla porta ante, vitae ultrices metus massa et augue. Donec odio erat, semper maximus est id, aliquet vestibulum nisl. Sed quis scelerisque augue.&lt;/p>
+&lt;p>Nunc sed leo et neque tempus interdum. Ut aliquam aliquam dolor, venenatis congue ex tincidunt vulputate. Praesent tristique vitae magna finibus lacinia. Morbi eget nisi quis turpis ornare ultrices sed in dolor. Pellentesque bibendum nibh at metus interdum ornare. In a semper velit. Phasellus in libero mi. Nam odio ante, luctus vel pharetra in, mattis nec tortor.&lt;/p>
+&lt;p>Cras quam nisl, ullamcorper vitae cursus sit amet, lacinia ut felis. In gravida vitae neque ut ultricies. Donec fermentum ut diam in maximus. Phasellus commodo sit amet ex nec dapibus. In hac habitasse platea dictumst. Suspendisse nunc dolor, pulvinar et posuere sed, molestie sit amet nulla. Proin sagittis vel erat ullamcorper posuere. Quisque diam mauris, gravida quis malesuada ut, porta nec purus. Donec imperdiet sit amet risus et faucibus. Sed gravida ligula at justo luctus vestibulum. Quisque orci orci, fermentum in lobortis vitae, tempor quis orci. Quisque facilisis et sapien sed maximus. Phasellus sodales tortor suscipit risus sodales, sit amet auctor quam suscipit. Duis ac lorem eget magna bibendum mattis at eget risus. Mauris nec finibus felis, sed sollicitudin mi. Quisque bibendum augue eu venenatis semper.&lt;/p>
+&lt;p>Curabitur interdum est et condimentum facilisis. Suspendisse scelerisque dapibus sapien eget blandit. Donec nunc augue, blandit vitae iaculis et, varius et diam. Maecenas ullamcorper ullamcorper arcu id tempus. Curabitur ultricies, lorem nec pretium porttitor, metus mauris aliquet urna, sit amet egestas nisi nisi at arcu. Vestibulum ac viverra velit. Etiam malesuada in ante eget laoreet. Praesent ut efficitur leo, sit amet hendrerit metus. Aenean vitae est iaculis, molestie orci at, euismod neque. Nulla tincidunt euismod nisi eget blandit. Nunc dictum, turpis eu blandit pretium, metus mi scelerisque urna, condimentum semper metus dolor sed mauris. Proin id nunc ut nisl mattis dapibus. Fusce vel lacus in lectus molestie sollicitudin in sit amet ligula. Pellentesque.&lt;/p></content></item><item><title>GG module golang</title><link>/gg-module-golang/</link><pubDate>Tue, 24 Aug 2021 18:09:52 +0700</pubDate><guid>/gg-module-golang/</guid><description>2D graphics dengan module gg di go-lang, sekilas function-nya mirip di js nyoba ngikutin di canvas API js eh bisa, ada beberapa harus di sesuaikan, contoh pacman-nya ambil dari sini
+Canvas API Javascript
+module gg (2D graphics) GG Module</description><content>&lt;p>2D graphics dengan module gg di go-lang, sekilas function-nya mirip di js nyoba ngikutin di canvas API js eh bisa, ada beberapa harus di sesuaikan, contoh pacman-nya ambil dari sini&lt;/p>
+&lt;p>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#making_combinations">Canvas API Javascript&lt;/a>&lt;/p>
+&lt;h2 id="module-gg-2d-graphics">module gg (2D graphics)&lt;/h2>
+&lt;p>&lt;a href="https://github.com/fogleman/gg">GG Module&lt;/a>&lt;/p></content></item><item><title>Test</title><link>/test/</link><pubDate>Tue, 17 Aug 2021 11:38:00 +0700</pubDate><guid>/test/</guid><description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim cursus magna, nec accumsan ipsum iaculis a. Vivamus ornare vehicula imperdiet. Nam aliquam enim eget elit ornare blandit. Integer non sem semper, volutpat orci ut, convallis velit. Phasellus et velit hendrerit, molestie sapien tempus, vestibulum erat. Nullam laoreet commodo lectus sagittis porttitor. Vestibulum et pellentesque urna, nec aliquam lorem. Duis eros nulla, ullamcorper eu ullamcorper eget, porta at dolor. Etiam sit amet commodo velit.</description><content>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim cursus magna, nec accumsan ipsum iaculis a. Vivamus ornare vehicula imperdiet. Nam aliquam enim eget elit ornare blandit. Integer non sem semper, volutpat orci ut, convallis velit. Phasellus et velit hendrerit, molestie sapien tempus, vestibulum erat. Nullam laoreet commodo lectus sagittis porttitor. Vestibulum et pellentesque urna, nec aliquam lorem. Duis eros nulla, ullamcorper eu ullamcorper eget, porta at dolor. Etiam sit amet commodo velit. Integer nulla elit, mattis vitae blandit at, finibus pellentesque tellus. Integer venenatis vulputate dui, convallis pulvinar neque viverra eget.&lt;/p>
+&lt;p>Sed non auctor ligula. Suspendisse potenti. Donec faucibus tellus sit amet nulla aliquet, sed vehicula sapien gravida. Mauris eget lectus non ligula laoreet ullamcorper viverra sit amet enim. Vestibulum vulputate faucibus molestie. Donec vitae leo eget nunc lacinia hendrerit. Aenean non lacus ac mauris elementum fringilla nec sit amet libero. Quisque vitae purus at metus elementum malesuada at vitae lorem. Proin justo justo, suscipit quis tortor nec, porta auctor felis.&lt;/p>
+&lt;p>Donec sed nunc tempor, tincidunt sem ac, rutrum leo. Proin eros libero, congue ut tempor vel, fermentum id mauris. Donec aliquet, nibh eu molestie porttitor, odio sem semper diam, ut ultricies ligula enim vitae elit. Suspendisse tortor lacus, aliquam sed convallis eu, tempus quis tortor. Sed semper nunc id gravida malesuada. Vestibulum dignissim odio ut lorem imperdiet, ac fringilla ante scelerisque. Vestibulum sit amet mi ultrices, commodo leo sed, varius purus. Aliquam imperdiet nisl sapien, sed tincidunt odio malesuada sed. Ut vel libero lectus. Pellentesque id vulputate magna. Vestibulum hendrerit enim nec pulvinar finibus. Cras malesuada commodo dolor, at euismod risus convallis non. Nam ut tincidunt nisl. Integer eget sagittis velit.&lt;/p>
+&lt;p>Vestibulum mollis arcu sed aliquet efficitur. Sed tempus non nibh in aliquam. Nunc vel sollicitudin leo. Curabitur tincidunt arcu lacinia lectus mollis fringilla. Mauris luctus ex a quam malesuada viverra. Aliquam fringilla massa suscipit urna congue, at placerat sem euismod. Nunc eu ornare tellus. Vestibulum posuere nisl nisi, vitae volutpat ex porttitor sit amet. Nam finibus condimentum gravida. Cras feugiat viverra massa et pretium. Nunc iaculis, urna ac imperdiet eleifend, nibh ipsum tempor nisi, eget posuere magna magna id sem. Donec cursus dui sed luctus facilisis.&lt;/p>
+&lt;p>Pellentesque nec neque interdum, vulputate eros ac, ornare velit. Suspendisse at ipsum ut nisl mollis pellentesque ornare id ligula. Vestibulum sit amet enim risus. Curabitur sed lorem et nisl dignissim aliquet a ac enim. Cras rutrum eu arcu non vestibulum. Proin dictum sapien ac felis blandit, ac tincidunt purus luctus. Curabitur quis mollis erat. Etiam ac scelerisque arcu, eget vulputate elit. Donec a lectus sollicitudin ipsum gravida malesuada. Praesent venenatis sapien ac turpis aliquet, commodo tincidunt mi hendrerit. Nam lacinia libero ex, vel cursus augue commodo vel. Maecenas vitae justo ut quam elementum maximus sed in ipsum.&lt;/p>
+&lt;p>Nam justo massa, pulvinar quis odio eu, blandit luctus neque. Vivamus porttitor quis velit eu accumsan. Ut tempus aliquet purus, vitae facilisis arcu egestas eget. Aliquam erat volutpat. Nunc nec libero dui. Suspendisse leo nisl, porta vitae est nec, eleifend sollicitudin enim. Phasellus euismod, velit sit amet cursus luctus, felis ante tincidunt nulla, vel varius nisl lectus vitae augue. Curabitur sit amet ligula luctus, venenatis magna ut, tristique risus. Pellentesque nisi mi, auctor ac iaculis et, cursus vel massa. Nulla vehicula pretium dui, nec vestibulum sapien suscipit sit amet. Morbi lobortis, metus vel placerat scelerisque, odio nisi varius diam, vel rhoncus lectus nulla a leo. Sed placerat eget sapien ac accumsan. Curabitur quis libero ut odio facilisis dapibus semper non tellus. Donec eu convallis sem, at semper odio.&lt;/p>
+&lt;p>Suspendisse justo sem, facilisis at sem vel, maximus suscipit dolor. Fusce bibendum leo a augue malesuada luctus. Vivamus faucibus maximus nunc id interdum. Nulla facilisi. Vivamus feugiat vitae sem ut dapibus. Maecenas non dignissim purus. Cras vulputate placerat consectetur.&lt;/p>
+&lt;p>In dictum nunc sit amet maximus fermentum. Sed massa nisl, pulvinar ut mollis eu, finibus et ligula. Nulla in libero sodales, vestibulum felis eget, venenatis nisl. Praesent efficitur accumsan consectetur. Suspendisse imperdiet vehicula ante nec porttitor. Nunc eu neque a turpis bibendum malesuada finibus at turpis. Fusce et elit lorem. Duis fringilla, justo vitae mollis commodo, nisi nulla porta ante, vitae ultrices metus massa et augue. Donec odio erat, semper maximus est id, aliquet vestibulum nisl. Sed quis scelerisque augue.&lt;/p>
+&lt;p>Nunc sed leo et neque tempus interdum. Ut aliquam aliquam dolor, venenatis congue ex tincidunt vulputate. Praesent tristique vitae magna finibus lacinia. Morbi eget nisi quis turpis ornare ultrices sed in dolor. Pellentesque bibendum nibh at metus interdum ornare. In a semper velit. Phasellus in libero mi. Nam odio ante, luctus vel pharetra in, mattis nec tortor.&lt;/p>
+&lt;p>Cras quam nisl, ullamcorper vitae cursus sit amet, lacinia ut felis. In gravida vitae neque ut ultricies. Donec fermentum ut diam in maximus. Phasellus commodo sit amet ex nec dapibus. In hac habitasse platea dictumst. Suspendisse nunc dolor, pulvinar et posuere sed, molestie sit amet nulla. Proin sagittis vel erat ullamcorper posuere. Quisque diam mauris, gravida quis malesuada ut, porta nec purus. Donec imperdiet sit amet risus et faucibus. Sed gravida ligula at justo luctus vestibulum. Quisque orci orci, fermentum in lobortis vitae, tempor quis orci. Quisque facilisis et sapien sed maximus. Phasellus sodales tortor suscipit risus sodales, sit amet auctor quam suscipit. Duis ac lorem eget magna bibendum mattis at eget risus. Mauris nec finibus felis, sed sollicitudin mi. Quisque bibendum augue eu venenatis semper.&lt;/p>
+&lt;p>Curabitur interdum est et condimentum facilisis. Suspendisse scelerisque dapibus sapien eget blandit. Donec nunc augue, blandit vitae iaculis et, varius et diam. Maecenas ullamcorper ullamcorper arcu id tempus. Curabitur ultricies, lorem nec pretium porttitor, metus mauris aliquet urna, sit amet egestas nisi nisi at arcu. Vestibulum ac viverra velit. Etiam malesuada in ante eget laoreet. Praesent ut efficitur leo, sit amet hendrerit metus. Aenean vitae est iaculis, molestie orci at, euismod neque. Nulla tincidunt euismod nisi eget blandit. Nunc dictum, turpis eu blandit pretium, metus mi scelerisque urna, condimentum semper metus dolor sed mauris. Proin id nunc ut nisl mattis dapibus. Fusce vel lacus in lectus molestie sollicitudin in sit amet ligula. Pellentesque.&lt;/p></content></item></channel></rss>

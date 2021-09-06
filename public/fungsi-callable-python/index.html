@@ -1,0 +1,137 @@
+<!doctype html><html lang=en>
+<head>
+<title>Fungsi callable() python :: lightning-x</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Fungsi callable pada python akan mengembalikan nilai `True` jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai `False`">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=/fungsi-callable-python/>
+<link rel=stylesheet href=/assets/style.css>
+<link rel=stylesheet href=/assets/green.css>
+<link rel=apple-touch-icon href=/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=/img/favicon/green.png>
+<meta name=twitter:card content="summary">
+<meta name=twitter:site content="uyhaa_zxcf">
+<meta name=twitter:creator content="Surya Efendi">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fungsi callable() python">
+<meta property="og:description" content="Fungsi callable pada python akan mengembalikan nilai `True` jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai `False`">
+<meta property="og:url" content="/fungsi-callable-python/">
+<meta property="og:site_name" content="lightning-x">
+<meta property="og:image" content="/img/favicon/green.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:published_time" content="2021-09-01 08:46:04 +0700 +07">
+</head>
+<body class=green>
+<div class="container center headings--one-size">
+<header class=header>
+<script src=https://stiobhart.net/download/isso/embed.min.js></script>
+<div class=header__inner>
+<div class=header__logo>
+<a href=/>
+<div class=logo>
+lightning-x
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=/fungsi-callable-python/>Fungsi callable() python</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2021-09-01
+</span>
+<span class=post-author>:: Surya Efendi</span>
+</div>
+<div class=post-content><div>
+<h2 id=deskripsi>Deskripsi<a href=#deskripsi class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>Fungsi callable pada python akan mengembalikan nilai <code>True</code> jika objek yang menjadi argumennya dapat dipanggil, jika tidak maka akan mengembalikan nilai <code>False</code></p>
+<hr>
+<h2 id=syntax>Syntax<a href=#syntax class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>Fungsi callable() memiliki sintaks sebagai berikut:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=n>callable</span><span class=p>(</span><span class=nb>object</span><span class=p>)</span>
+</code></pre></div><hr>
+<h2 id=parameter>Parameter<a href=#parameter class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<ul>
+<li>object – objek yang akan diuji apakah bisa dipanggil atau tidak</li>
+</ul>
+<hr>
+<h2 id=nilai-kembalian>Nilai Kembalian<a href=#nilai-kembalian class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>Fungsi callable() akan mengembalikan:</p>
+<ul>
+<li><code>True</code> &ndash; jika objek bisa dipanggil</li>
+<li><code>False</code> &ndash; jika objek tidak bisa dipanggil</li>
+</ul>
+<blockquote>
+<p>Perlu dicatat bahwa meskipun kembalian dari callable() adalah True, bisa saja pemanggilan terhadap objek masih gagal.</p>
+<p>Tapi, saat kembaliannya False, maka sudah pasti pemanggilan terhadap objek tersebut akan gagal.</p>
+<p>Perhatikan bahwa <code>Class</code> dapat dipanggil (memanggil <code>Class</code> akan mengembalikan sebuah fungsi) fungsi adalah callable jika <code>Class</code>-nya memiliki fungsi <code>__call__()</code></p>
+</blockquote>
+<hr>
+<h2 id=contoh>Contoh<a href=#contoh class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=n>a</span><span class=p>:</span><span class=nb>int</span> <span class=o>=</span> <span class=mi>10</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>callable</span><span class=p>(</span><span class=n>x</span><span class=p>))</span>
+
+<span class=k>def</span> <span class=nf>hello</span><span class=p>()</span><span class=o>-&gt;</span><span class=kc>None</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello World&#34;</span><span class=p>)</span>
+
+<span class=n>b</span> <span class=o>=</span> <span class=n>hello</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>callable</span><span class=p>(</span><span class=n>b</span><span class=p>))</span>
+
+<span class=k>class</span> <span class=nc>kelas</span><span class=p>:</span>
+    <span class=k>def</span> <span class=nf>fungsi</span><span class=p>()</span><span class=o>-&gt;</span><span class=kc>None</span><span class=p>:</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello World&#34;</span><span class=p>)</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=n>callable</span><span class=p>(</span><span class=n>kelas</span><span class=p>))</span>
+</code></pre></div><hr>
+<p>Output</p>
+<p>Output dari program di atas adalah seperti berikut:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=kc>False</span>
+<span class=kc>True</span>
+<span class=kc>True</span>
+</code></pre></div>
+</div></div>
+<div id=container-5fb049130f5ac4c9ac0b578322ca4faf></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h>Baca Artikel lainnya</span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button previous">
+<a href=/mode-debug-flask/>
+<span class=button__icon>←</span>
+<span class=button__text>Mode Debug Flask</span>
+</a>
+</span>
+<span class="button next">
+<a href=/test2/>
+<span class=button__text>Test2</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+<section id=isso-thread>
+</section>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>© 2021 ligtning-x | Diberdayakan oleh <a href=http://gohugo.io>Hugo</a></span>
+</div>
+</div>
+</footer>
+<script src=/assets/main.js></script>
+<script src=/assets/prism.js></script>
+<script async data-cfasync=false src=//pl16576237.effectivecpmgate.com/5fb049130f5ac4c9ac0b578322ca4faf/invoke.js></script>
+</div>
+</body>
+</html>

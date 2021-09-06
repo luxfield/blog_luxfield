@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python on lightning-x</title><link>/tags/python/</link><description>Recent content in python on lightning-x</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 05 Sep 2021 14:41:44 +0700</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Mode Debug Flask</title><link>/mode-debug-flask/</link><pubDate>Sun, 05 Sep 2021 14:41:44 +0700</pubDate><guid>/mode-debug-flask/</guid><description>Deskripsi Flask dapat melakukan aksi lebih banyak sekedar hanya menjalankan development server, dengan mengaktifkan debug mode, Flask secara otomatis akan memuat ulang server ketika ada perubahan kode, dan akan menampilkan sebuah debug interaktif pada browser jika ada masalah terjadi saat melakukan permintaan
+Peringatan debugger memperbolehkan menjalankan kode python dari browser, itu terlindungi oleh pin, tetapi tetap merupakan sebuah resiko keamanan utama, jangan jalankan development server atau debugger pada lingkungan production</description><content>&lt;h2 id="deskripsi">Deskripsi&lt;/h2>
+&lt;p>&lt;code>Flask&lt;/code> dapat melakukan aksi lebih banyak sekedar hanya menjalankan development server, dengan mengaktifkan debug mode, &lt;code>Flask&lt;/code> secara otomatis akan memuat ulang server ketika ada perubahan kode, dan akan menampilkan sebuah debug interaktif pada browser jika ada masalah terjadi saat melakukan permintaan&lt;/p>
+&lt;p>&lt;img src="https://flask.palletsprojects.com/en/2.0.x/_images/debugger.png" alt="Flask Debug">&lt;/p>
+&lt;hr>
+&lt;h2 id="peringatan">Peringatan&lt;/h2>
+&lt;p>debugger memperbolehkan menjalankan kode python dari browser, itu terlindungi oleh pin, tetapi tetap merupakan sebuah resiko keamanan utama, jangan jalankan development server atau debugger pada lingkungan production&lt;/p>
+&lt;hr>
+&lt;p>untuk mengaktifkan semua fitur development, set &lt;code>FLASK_ENV&lt;/code> pada environment variable dengan nilai development sebelum menjalankan &lt;code>Flask&lt;/code>&lt;/p>
+&lt;p>
+&lt;div class="collapsable-code">
+&lt;input id="1" type="checkbox" checked />
+&lt;label for="1">
+&lt;span class="collapsable-code__language">bash&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-bash" >&lt;code>
+$ export FLASK_ENV=development
+$ flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="collapsable-code">
+&lt;input id="2" type="checkbox" checked />
+&lt;label for="2">
+&lt;span class="collapsable-code__language">CMD&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-CMD" >&lt;code>
+&amp;gt; set FLASK_ENV=development
+&amp;gt; flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;div class="collapsable-code">
+&lt;input id="3" type="checkbox" checked />
+&lt;label for="3">
+&lt;span class="collapsable-code__language">Powershell&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="Tampilkan" data-label-collapse="Hide">&lt;/span>
+&lt;/label>
+&lt;pre class="language-Powershell" >&lt;code>
+&amp;gt; $env:FLASK_ENV = &amp;#34;development&amp;#34;
+&amp;gt; flask run
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/p>
+&lt;p>Lihat Juga:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/server/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Development Server&lt;/a> dan &lt;a href="https://flask.palletsprojects.com/en/2.0.x/cli/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Command Line Interface&lt;/a> untuk informasi tentang menjalankan web pada mode development
+&lt;/li>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/debugging/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Debugging Application Errors&lt;/a> for information about using the built-in debugger and other debuggers.
+&lt;/li>
+&lt;li>
+&lt;a href="https://flask.palletsprojects.com/en/2.0.x/logging/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Logging&lt;/a> dan &lt;a href="https://flask.palletsprojects.com/en/2.0.x/errorhandling/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">Handling Application Errors&lt;/a> to log errors and display nice error pages.
+&lt;/li>
+&lt;/ul></content></item></channel></rss>

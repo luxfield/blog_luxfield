@@ -1,0 +1,17 @@
+<header class="header">
+  {{ "<!-- isso -->" | safeHTML }}
+  <!-- <script data-isso="{{ .Site.BaseURL }}isso/" src="{{ .Site.BaseURL }}isso/js/embed.min.js"></script> -->
+  <script src="https://stiobhart.net/download/isso/embed.min.js"></script>
+  {{ "<!-- end isso -->" | safeHTML }}
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ partial "logo.html" . }}
+    </div>
+    {{ if len $.Site.Menus }}
+    <div class="menu-trigger">menu</div>
+    {{ end }}
+  </div>
+  {{ if len $.Site.Menus }}
+  {{ partial "menu.html" . }}
+  {{ end }}
+</header>

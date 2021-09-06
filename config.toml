@@ -3,6 +3,8 @@ languageCode = "en-us"
 theme = "terminal"
 paginate = 5
 canonifyurls = true
+pygmentsCodefences = true
+
 [permalinks]
   post = '/:slug/'
 
@@ -39,13 +41,13 @@ canonifyurls = true
   # set all headings to their default size (depending on browser settings)
   # it's set to `true` by default
   # oneHeadingSize = false
-  framed = "Hello World"
-[params.twitter]
-  # set Twitter handles for Twitter cards
-  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
-  # do not include @
-  creator = "uyhaa_zxcf"
-  site = "uyhaa_zxcf"
+
+  [params.twitter]
+    # set Twitter handles for Twitter cards
+    # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+    # do not include @
+    creator = "uyhaa_zxcf"
+    site = "uyhaa_zxcf"
 
 [languages]
   [languages.en]
@@ -76,3 +78,21 @@ canonifyurls = true
     #     identifier = "showcase"
     #     name = "Showcase"
     #     url = "/showcase"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe= true
+  
+  [markup.highlight]
+    
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4

@@ -2,3 +2,9 @@
 	path = public
 	url = git@github.com:luxfield/luxfield.github.io.git
 	branch = master
+[submodule "hugo-theme-terminal"]
+	path = hugo-theme-terminal
+	url = https://github.com/panr/hugo-theme-terminal
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git

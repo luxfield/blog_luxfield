@@ -2,9 +2,9 @@
 title: "Cara Membuat TOC di Hugo"
 date: 2021-09-06T18:18:35+07:00
 draft: false
-Author: "Surya Efendi"
-Description: "Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?"
-Cover: "https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"
+author: "Surya Efendi"
+description: "Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?"
+image: "https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"
 Toc: true
 TocTitle: "Daftar Isi"
 tags: ["Hugo"]

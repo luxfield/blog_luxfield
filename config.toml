@@ -4,6 +4,7 @@ theme = "terminal"
 paginate = 5
 canonifyurls = true
 pygmentsCodefences = true
+googleAnalytics = 'UA-77722104-1'
 
 [permalinks]
   post = '/:slug/'

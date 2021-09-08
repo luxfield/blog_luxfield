@@ -5,7 +5,7 @@ draft: false
 author: "Surya Efendi"
 description: "Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?"
 images: ["https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"]
-Cover: "https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"
+cover: "https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"
 Toc: true
 TocTitle: "Daftar Isi"
 tags: ["Hugo"]

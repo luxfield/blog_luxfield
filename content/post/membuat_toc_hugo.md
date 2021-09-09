@@ -4,10 +4,10 @@ date: 2021-09-06T18:18:35+07:00
 draft: false
 author: "Surya Efendi"
 description: "Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di blog itu apa sih ?"
-cover: "https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg"
+cover: "/img/hugo-logo.png"
 Toc: true
 TocTitle: "Daftar Isi"
-tags: ["Hugo"]
+tags: ["Hugo","Go","web","SSG"]
 ---
 
 **Cara Membuat TOC di Hugo** - Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, didalam daftar isi banyak judul-judul/bagian-bagian didalam sebuah blog, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di Hugo itu apa ?.
@@ -18,7 +18,7 @@ TOC (Table of Content) adalah pembuatan daftar isi secara otomatis dan dinamis, 
 
 Contohnya seperti ini:
 
-![toc](/img/membuat_toc_hugo/toc.jpg)
+{{< gambar src="/img/toc.jpg" >}}
 
 Jika salah satu poin pada daftar isinya di klik maka langsung mengarah ke pembahasan tersebut misal kita klik "On-Target (T.O.C)" maka tampilan halaman pada website akan langsung menampilkan pembahasan tentang "On-Target (T.O.C)" pada halaman website yang sama.
 
@@ -107,19 +107,9 @@ Kita bisa tau apa itu TOC dan fungsi TOC untuk website kita, memudahkan pembaca 
 
 **Referensi**
 
-<ul>
-    <li>
-        <a href="https://gohugo.io/content-management/toc/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/content-management/toc/</a>
-    </li>
-    <li>
-        <a href="https://gohugo.io/templates/partials/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/templates/partials/</a>
-    </li>
-    <li>
-        <a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://gohugo.io/getting-started/configuration-markup/#table-of-contents</a>
-    </li>
-    <li>
-        <a href="https://defriansyah.net/table-of-content/" onclick="window.open('https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b','_blank');" target="_blank">https://defriansyah.net/table-of-content/</a>
-    </li>
-</ul>
+- {{< a href="https://gohugo.io/content-management/toc/" teks="https://gohugo.io/content-management/toc/">}}
+- {{< a href="https://gohugo.io/templates/partials/" teks="https://gohugo.io/templates/partials/">}}
+- {{< a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents" teks="https://gohugo.io/getting-started/configuration-markup/#table-of-contents">}}
+- {{< a href="https://defriansyah.net/table-of-content/" teks="https://defriansyah.net/table-of-content/">}}
 
 ---

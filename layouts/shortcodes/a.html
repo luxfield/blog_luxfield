@@ -1,0 +1,10 @@
+{{ if .Get "href"}}
+<a href='{{ .Get "href" | safeURL }}'
+    onclick='window.open("https://www.effectivecpmgate.com/s3in6ahg?key=d097cf9f5c481b2e272dff32038a169b","_blank");'
+    target="_blank"
+    >
+    {{ with .Get "teks" }}
+    {{ . | plainify }} 
+    {{end}}
+</a>
+{{ end }}

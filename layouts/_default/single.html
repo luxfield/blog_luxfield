@@ -23,7 +23,7 @@
 
   {{ if .Params.Cover }}
   {{ $image := resources.Get .Params.Cover }}
-  {{ $imgprev := $image.Resize "1024x280 webp" }}
+  {{ $imgprev := $image.Resize "640x175 webp" }}
     <img src="{{ $imgprev.RelPermalink }}" class="img-fluid" alt="{{ .Title | plainify | default " " }}" />
   {{ end }}
 

@@ -7,9 +7,14 @@ pygmentsCodefences = true
 googleAnalytics = 'UA-77722104-1'
 Authors = 'Surya Efendi'
 
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
 [Social]
   facebook = 'abcdeg.maas'
-  
+
 [permalinks]
   post = '/:slug/'
 

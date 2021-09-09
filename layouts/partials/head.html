@@ -48,7 +48,8 @@
 {{ if and (not .IsHome) (isset .Params "cover") }}
 {{ $img := .Param "cover" }}
 {{ $image := resources.Get $img }}
-  <meta property="og:image" content='{{$image.Resize "1200x600 webp" | absURL }}'>
+{{ $imgprev := $image.Resize "1200x600 webp" }}
+  <meta property="og:image" content='{{$imgprev.RelPermalink }}'>
 {{ else }}
   {{ if isset $.Site.Params "favicon" }}
     <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">

@@ -5,7 +5,11 @@ paginate = 5
 canonifyurls = true
 pygmentsCodefences = true
 googleAnalytics = 'UA-77722104-1'
+Authors = 'Surya Efendi'
 
+[Social]
+  facebook = 'abcdeg.maas'
+  
 [permalinks]
   post = '/:slug/'
 

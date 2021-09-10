@@ -23,12 +23,12 @@
 
   {{ if .Params.Cover }}
   {{ $image := resources.Get .Params.Cover }}
-  {{ $imgwebp := $image.Resize "1024x280 q50 webp" }}
-  {{ $imgjpg := $image.Resize "1024x280 q50 jpg" }}
+  {{ $imgwebp := $image.Resize "1024x q50 webp" }}
+  {{ $imgjpg := $image.Resize "1024x q50 jpg" }}
   <picture>
     <source type="image/webp" srcset="{{ $imgwebp.RelPermalink }}">
     <source type="image/jpeg" srcset="{{ $imgjpg.RelPermalink }}">
-    <img src="{{ $image.RelPermalink }}" alt="" class="img-fluid" width="1024" height="280">
+    <img src="{{ $image.RelPermalink }}" alt="" class="img-fluid" width="1024">
   </picture>
   {{ end }}
 

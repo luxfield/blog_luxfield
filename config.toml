@@ -12,6 +12,11 @@ enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
 
+[module]
+  [[module.mounts]]
+      source = "static/img"
+      target = "assets/img"
+
 [Social]
   facebook = 'abcdeg.maas'
 

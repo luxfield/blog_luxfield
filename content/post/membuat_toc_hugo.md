@@ -18,7 +18,7 @@ TOC (Table of Content) adalah pembuatan daftar isi secara otomatis dan dinamis, 
 
 Contohnya seperti ini:
 
-{{< gambar src="/img/toc.jpg" >}}
+{{< gambar src="img/toc.jpg" >}}
 
 Jika salah satu poin pada daftar isinya di klik maka langsung mengarah ke pembahasan tersebut misal kita klik "On-Target (T.O.C)" maka tampilan halaman pada website akan langsung menampilkan pembahasan tentang "On-Target (T.O.C)" pada halaman website yang sama.
 

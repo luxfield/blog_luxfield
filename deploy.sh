@@ -2,8 +2,7 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Genterate file statis
-hugo --minify -t terminal # if using a theme, replace by `hugo -t <yourtheme>`
+
 
 # tambahkan perubahan ke Git
 git add -A
@@ -20,6 +19,10 @@ git push origin master
 
 # pindah ke direktori publik
 cd public
+
+# Genterate file statis
+hugo --minify -t terminal # if using a theme, replace by `hugo -t <yourtheme>`
+
 # tambahkan perubahan ke Git
 git add -A
 

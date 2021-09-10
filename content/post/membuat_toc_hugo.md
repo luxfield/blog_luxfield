@@ -7,7 +7,7 @@ description: "Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of 
 cover: "/img/hugo-logo.png"
 Toc: true
 TocTitle: "Daftar Isi"
-tags: ["Hugo","Go","web","SSG"]
+tags: ["Hugo","GoLang","web","SSG"]
 ---
 
 **Cara Membuat TOC di Hugo** - Kalian pasti sering lihat di sebuah blog ada sebuah TOC (Table of Content) atau daftar isi, didalam daftar isi banyak judul-judul/bagian-bagian didalam sebuah blog, sebenarnya daftar isi itu buat apa sih ? dan gunanya TOC di Hugo itu apa ?.

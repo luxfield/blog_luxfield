@@ -22,9 +22,6 @@ git push origin master
 # pindah ke direktori publik
 cd public
 
-# Genterate file statis
-hugo --minify # if using a theme, replace by `hugo -t <yourtheme>`
-
 # tambahkan perubahan ke Git
 git add -A
 

@@ -8,21 +8,27 @@
 {{ template "_internal/google_analytics.html" . }}
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}" media="all">
-
-<link rel="preload" href="{{ "css/styles.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ "css/styles.css" | absURL }}"></noscript>
-
-{{ if (isset .Params "color") }}
-  <link rel="stylesheet" href="{{ (printf "assets/%s.css" .Params.color) | absURL }}">
-{{ else if and (ne $.Site.Params.ThemeColor "orange") (ne $.Site.Params.ThemeColor "color" "") }}
-  <link rel="stylesheet" href="{{ (printf "assets/%s.css" $.Site.Params.ThemeColor) | absURL }}">
-{{ end }}
+<!-- <link rel="stylesheet" href="{{ "assets/style.css" | absURL }}" media="all"> -->
 
 <!-- Custom CSS to override theme properties (/static/style.css) -->
-{{ if (fileExists "static/style.css") -}}
-  <link rel="stylesheet" href="{{ "style.css" | absURL }}">
-{{- end }}
+{{ if (fileExists "static/css/style.css") }}
+  {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+  <link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ $style.Permalink }}"></noscript>
+{{ end }}
+
+{{ $style := resources.Get "css/styles.css" | minify | fingerprint }}
+<link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $style.Permalink }}"></noscript>
+
+{{$style_green := resources.Get "css/green.css" | minify | fingerprint}}
+<link rel="preload" href="{{ $style_green.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $style_green.Permalink }}"></noscript>
+
+
+{{ $cookie_css := resources.Get "css/cookie.css" | minify | fingerprint }}
+<link rel="preload" href="{{ $cookie_css.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $cookie_css.Permalink }}"></noscript>
 
 <!-- Icons -->
 <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon-192x192.png" | absURL }}">

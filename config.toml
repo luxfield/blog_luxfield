@@ -14,9 +14,22 @@ canonifyURLs = true
 
 [module]
   [[module.mounts]]
+      source = "static/css"
+      target = "assets/css"
+
+  [[module.mounts]]
+      source = "static/css/color"
+      target = "assets/css/color"
+
+  [[module.mounts]]
       source = "static/img"
       target = "assets/img"
-
+  
+  [[module.mounts]]
+      source = "static/js"
+      target = "assets/js"
+  
+  
 [Social]
   facebook = 'abcdeg.maas'
 

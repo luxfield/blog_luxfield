@@ -1,5 +1,5 @@
 ---
-title: "Cara Membuat TOC di Hugo"
+title: "Cara Membuat TOC secara otomatis di Hugo"
 date: 2021-09-06T18:18:35+07:00
 draft: false
 author: "Surya Efendi"

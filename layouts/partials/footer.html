@@ -12,12 +12,12 @@
         </div>
     </div>
   </footer>
-  {{ $prism := resources.Get "js/prism.js" | minify | fingerprint }}
-  {{ $main := resources.Get "js/main.js" | minify | fingerprint }}
-  {{ $cookie := resources.Get "js/cookie.js" | minify | fingerprint }}
-  <script src="{{ $cookie.Permalink}}"></script>
-  <script src="{{ $main.Permalink }}"></script>
-  <script src="{{ $prism.Permalink }}"></script>
+  {{ $prism := resources.Get "js/prism.js" | minify | fingerprint "sha512" }}
+  {{ $main := resources.Get "js/main.js" | minify | fingerprint "sha512" }}
+  {{ $cookie := resources.Get "js/cookie.js" | minify | fingerprint "sha512" }}
+  <script src="{{ $cookie.Permalink}}" integrity="{{ $cookie.Data.Integrity }}"></script>
+  <script src="{{ $main.Permalink }}" integrity="{{ $main.Data.Integrity }}"></script>
+  <script src="{{ $prism.Permalink }}" integrity="{{ $prism.Data.Integrity }}"></script>
   <script async="async" data-cfasync="false" src="//pl16576237.effectivecpmgate.com/5fb049130f5ac4c9ac0b578322ca4faf/invoke.js"></script>
   {{ if $.Site.Params.showLanguageSelector }}
     <script src="{{ "assets/languageSelector.js" | absURL }}"></script>

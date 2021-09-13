@@ -6,7 +6,7 @@
           <span>{{ $.Site.Copyright | safeHTML }}</span>
       {{ else }}
         <div class="copyright">
-          <span>© {{ now.Year }} ligtning-x | Diberdayakan oleh <a href="http://gohugo.io">Hugo</a></span>
+          <span>© {{ now.Year }} ligtning-x | Diberdayakan oleh <a href="http://gohugo.io">Hugo v{{hugo.Version | safeHTML}}</a></span>
       {{ end }}
           <!-- <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span> -->
         </div>

@@ -7,10 +7,6 @@
 <script data-ad-client="ca-pub-1304367022632325" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 {{ template "_internal/google_analytics.html" . }}
 
-<!-- Theme CSS -->
-<!-- <link rel="stylesheet" href="{{ "assets/style.css" | absURL }}" media="all"> -->
-
-<!-- Custom CSS to override theme properties (/static/style.css) -->
 {{ if (fileExists "static/css/style.css") }}
   {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="preload" href="{{ $style.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">

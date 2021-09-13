@@ -48,11 +48,11 @@
   {{ end }}
 
   <div class="post-content">
-    {{- with .Content -}}
+    {{ with .Content }}
       <div>
         {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
       </div>
-    {{- end -}}
+    {{ end }}
   </div>
   <div id="container-5fb049130f5ac4c9ac0b578322ca4faf"></div>
   {{ if eq .Type $.Site.Params.contentTypeName }}
